@@ -47,27 +47,20 @@ const FormSection = ({ title, children }) => (
 
 const CheckboxField = ({ label, checked, onChange, fullWidth = false, name }) => (
     <div className={`relative flex items-start ${fullWidth ? 'sm:col-span-2' : ''}`}>
-        <div className="flex h-6 items-center">
-            <input 
-                id={name}
-                type="checkbox" 
-                name={name} 
-                checked={checked} 
-                onChange={onChange} 
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" 
+        <label className="flex items-center space-x-3 cursor-pointer">
+            <input
+                type="checkbox"
+                name={name}
+                checked={checked}
+                onChange={onChange}
+                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
             />
-        </div>
-        <div className="ml-3 text-sm leading-6">
-            <label 
-                htmlFor={name}
-                className="font-medium text-gray-900 dark:text-gray-200"
-            >
+            <span className="font-medium text-gray-900 dark:text-gray-200 text-sm">
                 {label}
-            </label>
-        </div>
+            </span>
+        </label>
     </div>
 );
-
 // --- Main App Components ---
 
 const BookForm = ({ book, onSave, onCancel }) => {
