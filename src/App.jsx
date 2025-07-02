@@ -49,7 +49,7 @@ const CheckboxField = ({ label, checked, onChange, fullWidth = false, name }) =>
     <div className={`relative flex items-start ${fullWidth ? 'sm:col-span-2' : ''}`}>
         <div className="flex h-6 items-center">
             <input 
-                id={name} // <-- ADD THIS ID
+                id={name}
                 type="checkbox" 
                 name={name} 
                 checked={checked} 
@@ -59,7 +59,7 @@ const CheckboxField = ({ label, checked, onChange, fullWidth = false, name }) =>
         </div>
         <div className="ml-3 text-sm leading-6">
             <label 
-                htmlFor={name} // <-- ADD THIS FOR ATTRIBUTE
+                htmlFor={name}
                 className="font-medium text-gray-900 dark:text-gray-200"
             >
                 {label}
